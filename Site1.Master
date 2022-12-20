@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="home.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" >
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server" > </asp:ContentPlaceHolder>
+        <header style="background-color:aqua" > 
+            <h1> &nbsp;WELCOME </h1>    
+        </header>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav >
+         <asp:Menu ID="menu2" runat="server" Orientation="Vertical">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="home.aspx" Text="Home"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="login.aspx" Text="Login">
+                                <asp:MenuItem Text="Admin" NavigateUrl="adminlogin.aspx" Value="Admin"></asp:MenuItem>
+                                <asp:MenuItem Text="User" NavigateUrl="userlogin.aspx" Value="User"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem  Text="Register">
+                                <asp:MenuItem Text="Admin" NavigateUrl="admin.aspx" Value="Admin"></asp:MenuItem>
+                                <asp:MenuItem Text="User" NavigateUrl="register.aspx" Value="User"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="userlogin.aspx" Text="Quiz"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle VerticalPadding="20px" />
+                    </asp:Menu>
+                    </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             
+               
+            </asp:ContentPlaceHolder>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </form>
+     <footer >
+         content @2023</footer>
+        </body>
+</html>
